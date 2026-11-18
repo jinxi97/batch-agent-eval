@@ -13,7 +13,9 @@ Run [Harbor](https://pypi.org/project/harbor/) agent evals (e.g. SWE-bench Verif
 ```
 .
 ├── configs/kimi-k3.1-pro-modal.yaml   # Harbor JobConfig: agent, model, kwargs, pricing, environment
+├── configs/swe-bench-verified-60.yaml # fixed 60-task subset (generated; see "60-task subset" below)
 ├── scripts/run-eval.sh                # wrapper: loads .env, injects endpoint URL, calls `harbor run`
+├── scripts/sample_tasks.py            # generates task-subset configs (stratified, seeded)
 ├── .env.example                       # MODAL_PROXY_KEY, MODAL_ENDPOINT_URL
 └── jobs/                              # results (only summary files are committed; see §3)
 ```
@@ -83,8 +85,8 @@ scripts/run-eval.sh --job-name my-django-run
 # A different single task (IDs need the "swe-bench/" prefix)
 scripts/run-eval.sh -t swe-bench/astropy__astropy-12907
 
-# A slice of the dataset: 20 tasks, 8 in parallel
-scripts/run-eval.sh -d swe-bench/swe-bench-verified -l 20 -n 8
+# The fixed 60-task subset (see below)
+scripts/run-eval.sh -c configs/swe-bench-verified-60.yaml --job-name kimi-k31-pro-swv60
 
 # Filter by glob
 scripts/run-eval.sh -d swe-bench/swe-bench-verified -i 'swe-bench/django__*'
@@ -92,6 +94,34 @@ scripts/run-eval.sh -d swe-bench/swe-bench-verified -i 'swe-bench/django__*'
 # Full SWE-bench Verified (500 tasks)
 scripts/run-eval.sh -d swe-bench/swe-bench-verified -n 16
 ```
+
+### 60-task subset
+
+`configs/swe-bench-verified-60.yaml` lists 60 SWE-bench Verified tasks, so every run of the subset
+uses exactly the same tasks. They were drawn at random with a fixed seed, stratified by repo ×
+difficulty, so the mix roughly matches the full 500:
+
+| | Subset (60) | Full set (500) |
+|---|---|---|
+| django / sympy / sphinx / matplotlib / scikit-learn | 28 / 9 / 5 / 4 / 4 | 231 / 75 / 44 / 34 / 32 |
+| astropy / xarray / pytest / requests / pylint | 3 / 3 / 2 / 1 / 1 | 22 / 22 / 19 / 8 / 10 |
+| seaborn / flask | 0 / 0 | 2 / 1 |
+| `<15 min fix` / `15 min - 1 hour` / `1-4 hours` / `>4 hours` | 25 / 31 / 4 / 0 | 194 / 261 / 42 / 3 |
+
+The subset config also sets `n_concurrent_trials: 8` (8 tasks at a time); override with `-n`.
+
+To regenerate it, or to make a subset of a different size:
+
+```bash
+uv run python scripts/sample_tasks.py                      # 60 tasks, seed 0 (reproduces the committed file)
+uv run python scripts/sample_tasks.py --n 100 --seed 0 --out configs/swe-bench-verified-100.yaml
+```
+
+The script downloads the 500 task definitions from the Harbor registry (a few MB; no container
+images) to read each task's repo and difficulty label. The registry sometimes drops connections
+partway through; the script retries and fetches only the missing tasks.
+
+### Other options
 
 Any extra arguments go straight to `harbor run` (see `uv run harbor run --help`). Useful ones:
 `--dry-run` (validate without running), `--print-config` (show resolved config),
