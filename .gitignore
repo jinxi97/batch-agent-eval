@@ -1,0 +1,15 @@
+.env
+.venv/
+__pycache__/
+.context/
+
+# Harbor results: track only small summary files (scores, tokens, cost, versions).
+# Trajectories, terminal recordings and logs stay local.
+/jobs/**
+!/jobs/**/
+!/jobs/*/result.json
+!/jobs/*/config.json
+!/jobs/*/lock.json
+!/jobs/*/*/result.json
+!/jobs/*/*/verifier/reward.txt
+!/jobs/*/*/verifier/report.json

@@ -1,0 +1,40 @@
+# Harbor JobConfig: terminus-2 agent + Kimi-K3.1-Pro (Modal Shared Endpoint) + Modal sandboxes.
+#
+# Task selection (-t / -d / -i / -l) and the endpoint URL (--base-url) are passed
+# on the command line by scripts/run-eval.sh, so this file holds no secrets or
+# per-user values. Full schema: `uv run harbor job schema`.
+
+jobs_dir: jobs
+n_attempts: 1
+n_concurrent_trials: 4
+
+environment:
+  # SWE-bench images are x86_64; Modal avoids emulation on Apple Silicon.
+  type: modal
+  delete: true
+
+agents:
+  - name: terminus-2
+    # "openai/" = OpenAI-compatible Chat Completions; the rest is the model ID
+    # returned by the endpoint's /v1/models.
+    model_name: openai/moonshotai/Kimi-K3.1-Pro
+    # Env var holding the Modal proxy token, formatted "wk-<id>.ws-<secret>".
+    model_api_key_name: MODAL_PROXY_KEY
+    kwargs:
+      # Kimi returns reasoning in `reasoning_content`; feed it back on later turns.
+      interleaved_thinking: true
+      # Pin each trial to one Modal container so the prompt-prefix KV cache is reused.
+      session_id_headers:
+        - Modal-Routing-Affinity-Key
+      # LiteLLM doesn't know this model: context window + Modal per-token pricing
+      # (USD per token: $2.00 / $0.20 cached / $10.00 per 1M) so Harbor reports cost_usd.
+      model_info:
+        litellm_provider: openai
+        mode: chat
+        max_input_tokens: 1048576
+        max_output_tokens: 65536
+        input_cost_per_token: 2.0e-6
+        cache_read_input_token_cost: 2.0e-7
+        output_cost_per_token: 1.0e-5
+      # No reasoning_effort set: the endpoint's default is used.
+      # To set one, add e.g. `reasoning_effort: high` (endpoint accepts low|high|max).
