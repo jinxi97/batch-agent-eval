@@ -5,6 +5,6 @@ description = "Run Harbor agent evals (e.g. SWE-bench Verified) against Modal-ho
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
-    "harbor==0.26.0",
+    "harbor[modal]==0.26.0",
     "modal>=1.6.4",
 ]
