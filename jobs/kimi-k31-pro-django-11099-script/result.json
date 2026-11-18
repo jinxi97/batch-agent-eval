@@ -1,0 +1,40 @@
+{
+    "schema_version": 1,
+    "id": "8b2df0b2-eccf-4957-9294-77d2cf585470",
+    "started_at": "2026-11-17T21:41:43.272452",
+    "updated_at": "2026-11-17T21:54:13.753879",
+    "finished_at": "2026-11-17T21:54:13.753879",
+    "n_total_trials": 1,
+    "stats": {
+        "n_completed_trials": 1,
+        "n_errored_trials": 0,
+        "n_running_trials": 0,
+        "n_pending_trials": 0,
+        "n_cancelled_trials": 0,
+        "n_retries": 0,
+        "evals": {
+            "terminus-2__moonshotai/Kimi-K3.1-Pro__adhoc": {
+                "n_trials": 1,
+                "n_errors": 0,
+                "metrics": [
+                    {
+                        "mean": 1.0
+                    }
+                ],
+                "pass_at_k": {},
+                "reward_stats": {
+                    "reward": {
+                        "1.0": [
+                            "django__django-11099__zGDvGRW"
+                        ]
+                    }
+                },
+                "exception_stats": {}
+            }
+        },
+        "n_input_tokens": 14865,
+        "n_cache_tokens": 11328,
+        "n_output_tokens": 2022,
+        "cost_usd": 0.0295596
+    }
+}
