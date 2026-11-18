@@ -1,0 +1,164 @@
+{
+    "schema_version": 1,
+    "id": "d51f2f7b-b992-46ce-8e34-43cc86c88fb8",
+    "task_name": "swe-bench/django__django-11206",
+    "trial_name": "django__django-11206__CKvqXe9",
+    "trial_uri": "file:///Users/jasonjin/conductor/workspaces/batch-agent-eval/missoula/jobs/kimi-k31-pro-swv60/django__django-11206__CKvqXe9",
+    "task_id": {
+        "org": "swe-bench",
+        "name": "django__django-11206",
+        "ref": "sha256:c5435a67cf95b4448530cdf83fa7179eb1943b2d012362e26b42a1d4b3cf096a"
+    },
+    "source": "swe-bench/swe-bench-verified",
+    "task_checksum": "da9ffe34f83fff9a47629873158a3d568380dcdcfb95be807c0d9f6bd6d09322",
+    "config": {
+        "schema_version": 1,
+        "task": {
+            "path": null,
+            "git_url": null,
+            "git_commit_id": null,
+            "name": "swe-bench/django__django-11206",
+            "ref": "sha256:c5435a67cf95b4448530cdf83fa7179eb1943b2d012362e26b42a1d4b3cf096a",
+            "overwrite": false,
+            "download_dir": null,
+            "source": "swe-bench/swe-bench-verified"
+        },
+        "trial_name": "django__django-11206__CKvqXe9",
+        "trials_dir": "jobs/kimi-k31-pro-swv60",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "terminus-2",
+            "import_path": null,
+            "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+            "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+            "model_api_key_name": "MODAL_PROXY_KEY",
+            "model_api_format": null,
+            "skip_model_parsing": false,
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "interleaved_thinking": true,
+                "session_id_headers": [
+                    "Modal-Routing-Affinity-Key"
+                ],
+                "model_info": {
+                    "litellm_provider": "openai",
+                    "mode": "chat",
+                    "max_input_tokens": 1048576,
+                    "max_output_tokens": 65536,
+                    "input_cost_per_token": 2e-6,
+                    "cache_read_input_token_cost": 2e-7,
+                    "output_cost_per_token": 0.00001
+                }
+            },
+            "mcp_servers": []
+        },
+        "user_agent": null,
+        "environment": {
+            "type": "modal",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "stream": false,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "override_error_policy": {},
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "extra_instructions": [],
+        "job_id": "44625f19-07d0-4fa5-926d-8f40d37e6139",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "terminus-2",
+        "version": "2.0.0",
+        "model_info": {
+            "name": "moonshotai/Kimi-K3.1-Pro",
+            "provider": "openai"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 90697,
+        "n_cache_tokens": 78848,
+        "n_output_tokens": 6684,
+        "cost_usd": 0.1063076,
+        "model_usage": {
+            "moonshotai/Kimi-K3.1-Pro": {
+                "n_input_tokens": 90697,
+                "n_cache_tokens": 78848,
+                "n_output_tokens": 6684,
+                "cost_usd": 0.1063076
+            }
+        },
+        "rollout_details": [],
+        "metadata": {
+            "n_episodes": 9,
+            "api_request_times_msec": [
+                4728.471994400024,
+                3296.5240478515625,
+                5408.45799446106,
+                33868.17407608032,
+                6427.928924560547,
+                6568.734884262085,
+                7273.5090255737305,
+                2083.7559700012207,
+                1428.1032085418701
+            ],
+            "summarization_count": 0
+        }
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 1.0
+        }
+    },
+    "verifier_environment_mode": "shared",
+    "exception_info": null,
+    "started_at": "2026-11-18T07:22:10.549876Z",
+    "finished_at": "2026-11-18T07:35:54.392095Z",
+    "environment_setup": {
+        "started_at": "2026-11-18T07:22:10.553643Z",
+        "finished_at": "2026-11-18T07:32:56.808548Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-11-18T07:32:56.808814Z",
+        "finished_at": "2026-11-18T07:33:08.677866Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-11-18T07:33:08.678683Z",
+        "finished_at": "2026-11-18T07:35:34.899985Z"
+    },
+    "verifier": {
+        "started_at": "2026-11-18T07:35:36.199296Z",
+        "finished_at": "2026-11-18T07:35:53.234838Z"
+    },
+    "step_results": null,
+    "reward_valid": true
+}

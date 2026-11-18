@@ -1,0 +1,172 @@
+{
+    "schema_version": 1,
+    "id": "c6b3834a-5b64-4047-adb7-14b46a185d08",
+    "task_name": "swe-bench/django__django-12273",
+    "trial_name": "django__django-12273__3EfMiiG",
+    "trial_uri": "file:///Users/jasonjin/conductor/workspaces/batch-agent-eval/missoula/jobs/kimi-k31-pro-swv60/django__django-12273__3EfMiiG",
+    "task_id": {
+        "org": "swe-bench",
+        "name": "django__django-12273",
+        "ref": "sha256:35b1a667c2f976d33d0ee00053ebc0353db22d90b61afba1b206e5640a977435"
+    },
+    "source": "swe-bench/swe-bench-verified",
+    "task_checksum": "15d7f317c8ff662c8acd0a5ca5e2ce59610124c125d44e7140f402c73ebde169",
+    "config": {
+        "schema_version": 1,
+        "task": {
+            "path": null,
+            "git_url": null,
+            "git_commit_id": null,
+            "name": "swe-bench/django__django-12273",
+            "ref": "sha256:35b1a667c2f976d33d0ee00053ebc0353db22d90b61afba1b206e5640a977435",
+            "overwrite": false,
+            "download_dir": null,
+            "source": "swe-bench/swe-bench-verified"
+        },
+        "trial_name": "django__django-12273__3EfMiiG",
+        "trials_dir": "jobs/kimi-k31-pro-swv60",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "terminus-2",
+            "import_path": null,
+            "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+            "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+            "model_api_key_name": "MODAL_PROXY_KEY",
+            "model_api_format": null,
+            "skip_model_parsing": false,
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "interleaved_thinking": true,
+                "session_id_headers": [
+                    "Modal-Routing-Affinity-Key"
+                ],
+                "model_info": {
+                    "litellm_provider": "openai",
+                    "mode": "chat",
+                    "max_input_tokens": 1048576,
+                    "max_output_tokens": 65536,
+                    "input_cost_per_token": 2e-6,
+                    "cache_read_input_token_cost": 2e-7,
+                    "output_cost_per_token": 0.00001
+                }
+            },
+            "mcp_servers": []
+        },
+        "user_agent": null,
+        "environment": {
+            "type": "modal",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "stream": false,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "override_error_policy": {},
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "extra_instructions": [],
+        "job_id": "44625f19-07d0-4fa5-926d-8f40d37e6139",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "terminus-2",
+        "version": "2.0.0",
+        "model_info": {
+            "name": "moonshotai/Kimi-K3.1-Pro",
+            "provider": "openai"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 266930,
+        "n_cache_tokens": 242048,
+        "n_output_tokens": 9113,
+        "cost_usd": 0.18930360000000002,
+        "model_usage": {
+            "moonshotai/Kimi-K3.1-Pro": {
+                "n_input_tokens": 266930,
+                "n_cache_tokens": 242048,
+                "n_output_tokens": 9113,
+                "cost_usd": 0.18930360000000002
+            }
+        },
+        "rollout_details": [],
+        "metadata": {
+            "n_episodes": 17,
+            "api_request_times_msec": [
+                4311.845064163208,
+                3789.1311645507812,
+                3075.518846511841,
+                2754.8558712005615,
+                17490.83685874939,
+                11289.952039718628,
+                7351.227045059204,
+                7760.593891143799,
+                9784.711837768555,
+                2627.737045288086,
+                3600.956916809082,
+                2323.0977058410645,
+                8499.701023101807,
+                4361.010789871216,
+                8638.24200630188,
+                11402.923107147217,
+                2618.8812255859375
+            ],
+            "summarization_count": 0
+        }
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 1.0
+        }
+    },
+    "verifier_environment_mode": "shared",
+    "exception_info": null,
+    "started_at": "2026-11-18T07:06:42.356200Z",
+    "finished_at": "2026-11-18T07:12:49.534251Z",
+    "environment_setup": {
+        "started_at": "2026-11-18T07:06:42.358057Z",
+        "finished_at": "2026-11-18T07:07:53.633460Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-11-18T07:07:53.633474Z",
+        "finished_at": "2026-11-18T07:08:11.627973Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-11-18T07:08:11.628353Z",
+        "finished_at": "2026-11-18T07:12:29.419217Z"
+    },
+    "verifier": {
+        "started_at": "2026-11-18T07:12:31.311503Z",
+        "finished_at": "2026-11-18T07:12:48.520921Z"
+    },
+    "step_results": null,
+    "reward_valid": true
+}

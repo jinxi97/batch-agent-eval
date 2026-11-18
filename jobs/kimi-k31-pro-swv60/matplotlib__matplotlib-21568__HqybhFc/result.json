@@ -1,0 +1,172 @@
+{
+    "schema_version": 1,
+    "id": "002502ea-7074-44a2-9b69-850404b4c226",
+    "task_name": "swe-bench/matplotlib__matplotlib-21568",
+    "trial_name": "matplotlib__matplotlib-21568__HqybhFc",
+    "trial_uri": "file:///Users/jasonjin/conductor/workspaces/batch-agent-eval/missoula/jobs/kimi-k31-pro-swv60/matplotlib__matplotlib-21568__HqybhFc",
+    "task_id": {
+        "org": "swe-bench",
+        "name": "matplotlib__matplotlib-21568",
+        "ref": "sha256:06df6436f473de482ec6d06a62d5176e04984fbfe7eef2ef7dc7b5f8b87a8c1f"
+    },
+    "source": "swe-bench/swe-bench-verified",
+    "task_checksum": "2b20e36f21750a9d2eb1fa9d06833151128672cf619fcc7e10fb8ffee8fa2194",
+    "config": {
+        "schema_version": 1,
+        "task": {
+            "path": null,
+            "git_url": null,
+            "git_commit_id": null,
+            "name": "swe-bench/matplotlib__matplotlib-21568",
+            "ref": "sha256:06df6436f473de482ec6d06a62d5176e04984fbfe7eef2ef7dc7b5f8b87a8c1f",
+            "overwrite": false,
+            "download_dir": null,
+            "source": "swe-bench/swe-bench-verified"
+        },
+        "trial_name": "matplotlib__matplotlib-21568__HqybhFc",
+        "trials_dir": "jobs/kimi-k31-pro-swv60",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "terminus-2",
+            "import_path": null,
+            "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+            "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+            "model_api_key_name": "MODAL_PROXY_KEY",
+            "model_api_format": null,
+            "skip_model_parsing": false,
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "interleaved_thinking": true,
+                "session_id_headers": [
+                    "Modal-Routing-Affinity-Key"
+                ],
+                "model_info": {
+                    "litellm_provider": "openai",
+                    "mode": "chat",
+                    "max_input_tokens": 1048576,
+                    "max_output_tokens": 65536,
+                    "input_cost_per_token": 2e-6,
+                    "cache_read_input_token_cost": 2e-7,
+                    "output_cost_per_token": 0.00001
+                }
+            },
+            "mcp_servers": []
+        },
+        "user_agent": null,
+        "environment": {
+            "type": "modal",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "stream": false,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "override_error_policy": {},
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "extra_instructions": [],
+        "job_id": "44625f19-07d0-4fa5-926d-8f40d37e6139",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "terminus-2",
+        "version": "2.0.0",
+        "model_info": {
+            "name": "moonshotai/Kimi-K3.1-Pro",
+            "provider": "openai"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 241152,
+        "n_cache_tokens": 207872,
+        "n_output_tokens": 6402,
+        "cost_usd": 0.1721544,
+        "model_usage": {
+            "moonshotai/Kimi-K3.1-Pro": {
+                "n_input_tokens": 241152,
+                "n_cache_tokens": 207872,
+                "n_output_tokens": 6402,
+                "cost_usd": 0.1721544
+            }
+        },
+        "rollout_details": [],
+        "metadata": {
+            "n_episodes": 17,
+            "api_request_times_msec": [
+                3037.755250930786,
+                3285.2420806884766,
+                7206.916093826294,
+                3672.3499298095703,
+                12425.958156585693,
+                3285.1498126983643,
+                2703.7880420684814,
+                3423.7420558929443,
+                1888.4861469268799,
+                9727.7250289917,
+                2492.568016052246,
+                2804.150104522705,
+                2322.2830295562744,
+                5586.630821228027,
+                2385.9031200408936,
+                2021.0771560668945,
+                1196.108102798462
+            ],
+            "summarization_count": 0
+        }
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 1.0
+        }
+    },
+    "verifier_environment_mode": "shared",
+    "exception_info": null,
+    "started_at": "2026-11-18T07:19:14.098294Z",
+    "finished_at": "2026-11-18T07:32:35.574247Z",
+    "environment_setup": {
+        "started_at": "2026-11-18T07:19:14.101617Z",
+        "finished_at": "2026-11-18T07:28:57.838352Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-11-18T07:28:57.838410Z",
+        "finished_at": "2026-11-18T07:29:06.114462Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-11-18T07:29:06.115068Z",
+        "finished_at": "2026-11-18T07:32:19.419052Z"
+    },
+    "verifier": {
+        "started_at": "2026-11-18T07:32:21.226830Z",
+        "finished_at": "2026-11-18T07:32:35.097505Z"
+    },
+    "step_results": null,
+    "reward_valid": true
+}

@@ -1,0 +1,179 @@
+{
+    "schema_version": 1,
+    "id": "058e1bc9-2abc-46b9-9e99-d9b672f4f15c",
+    "task_name": "swe-bench/django__django-16100",
+    "trial_name": "django__django-16100__b6enHXz",
+    "trial_uri": "file:///Users/jasonjin/conductor/workspaces/batch-agent-eval/missoula/jobs/kimi-k31-pro-swv60/django__django-16100__b6enHXz",
+    "task_id": {
+        "org": "swe-bench",
+        "name": "django__django-16100",
+        "ref": "sha256:beb864b0182f1f5ce53c6ff2762c2bd6c4aef6ff048fc0c777b58403972e972e"
+    },
+    "source": "swe-bench/swe-bench-verified",
+    "task_checksum": "27b0d929ea11b0a2f57fb626f95ee9438342833d3dda77a6577322ac17bbf68a",
+    "config": {
+        "schema_version": 1,
+        "task": {
+            "path": null,
+            "git_url": null,
+            "git_commit_id": null,
+            "name": "swe-bench/django__django-16100",
+            "ref": "sha256:beb864b0182f1f5ce53c6ff2762c2bd6c4aef6ff048fc0c777b58403972e972e",
+            "overwrite": false,
+            "download_dir": null,
+            "source": "swe-bench/swe-bench-verified"
+        },
+        "trial_name": "django__django-16100__b6enHXz",
+        "trials_dir": "jobs/kimi-k31-pro-swv60",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "terminus-2",
+            "import_path": null,
+            "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+            "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+            "model_api_key_name": "MODAL_PROXY_KEY",
+            "model_api_format": null,
+            "skip_model_parsing": false,
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "interleaved_thinking": true,
+                "session_id_headers": [
+                    "Modal-Routing-Affinity-Key"
+                ],
+                "model_info": {
+                    "litellm_provider": "openai",
+                    "mode": "chat",
+                    "max_input_tokens": 1048576,
+                    "max_output_tokens": 65536,
+                    "input_cost_per_token": 2e-6,
+                    "cache_read_input_token_cost": 2e-7,
+                    "output_cost_per_token": 0.00001
+                }
+            },
+            "mcp_servers": []
+        },
+        "user_agent": null,
+        "environment": {
+            "type": "modal",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "stream": false,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "override_error_policy": {},
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "extra_instructions": [],
+        "job_id": "44625f19-07d0-4fa5-926d-8f40d37e6139",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "terminus-2",
+        "version": "2.0.0",
+        "model_info": {
+            "name": "moonshotai/Kimi-K3.1-Pro",
+            "provider": "openai"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 413271,
+        "n_cache_tokens": 368512,
+        "n_output_tokens": 9178,
+        "cost_usd": 0.2550004,
+        "model_usage": {
+            "moonshotai/Kimi-K3.1-Pro": {
+                "n_input_tokens": 413271,
+                "n_cache_tokens": 368512,
+                "n_output_tokens": 9178,
+                "cost_usd": 0.2550004
+            }
+        },
+        "rollout_details": [],
+        "metadata": {
+            "n_episodes": 24,
+            "api_request_times_msec": [
+                4620.504140853882,
+                1739.8948669433594,
+                3933.781862258911,
+                2232.261896133423,
+                1777.9719829559326,
+                2866.250991821289,
+                15435.170650482178,
+                6137.573719024658,
+                2353.7240028381348,
+                3002.725839614868,
+                5680.912017822266,
+                1854.3710708618164,
+                3870.3622817993164,
+                1709.388017654419,
+                966.9392108917236,
+                1569.2622661590576,
+                8101.779937744141,
+                3421.24605178833,
+                6059.777021408081,
+                5452.603101730347,
+                1073.3880996704102,
+                2317.0368671417236,
+                1424.381971359253,
+                1145.0097560882568
+            ],
+            "summarization_count": 0
+        }
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 1.0
+        }
+    },
+    "verifier_environment_mode": "shared",
+    "exception_info": null,
+    "started_at": "2026-11-18T07:01:39.518207Z",
+    "finished_at": "2026-11-18T07:08:45.279270Z",
+    "environment_setup": {
+        "started_at": "2026-11-18T07:01:39.520576Z",
+        "finished_at": "2026-11-18T07:02:23.516778Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-11-18T07:02:23.517336Z",
+        "finished_at": "2026-11-18T07:02:32.944571Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-11-18T07:02:32.946557Z",
+        "finished_at": "2026-11-18T07:08:14.874026Z"
+    },
+    "verifier": {
+        "started_at": "2026-11-18T07:08:16.703355Z",
+        "finished_at": "2026-11-18T07:08:44.899658Z"
+    },
+    "step_results": null,
+    "reward_valid": true
+}

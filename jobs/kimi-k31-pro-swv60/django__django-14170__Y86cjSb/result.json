@@ -1,0 +1,170 @@
+{
+    "schema_version": 1,
+    "id": "4e03520e-f67a-443b-bdd4-f17a2031836e",
+    "task_name": "swe-bench/django__django-14170",
+    "trial_name": "django__django-14170__Y86cjSb",
+    "trial_uri": "file:///Users/jasonjin/conductor/workspaces/batch-agent-eval/missoula/jobs/kimi-k31-pro-swv60/django__django-14170__Y86cjSb",
+    "task_id": {
+        "org": "swe-bench",
+        "name": "django__django-14170",
+        "ref": "sha256:e574df2c38dab6af9b8a5db2de401eee6a11aa8dff74905f0d365d93b425bd33"
+    },
+    "source": "swe-bench/swe-bench-verified",
+    "task_checksum": "7b830847697601fce0073d912efd4870018fd3877abf6338822a4e17e7bc9866",
+    "config": {
+        "schema_version": 1,
+        "task": {
+            "path": null,
+            "git_url": null,
+            "git_commit_id": null,
+            "name": "swe-bench/django__django-14170",
+            "ref": "sha256:e574df2c38dab6af9b8a5db2de401eee6a11aa8dff74905f0d365d93b425bd33",
+            "overwrite": false,
+            "download_dir": null,
+            "source": "swe-bench/swe-bench-verified"
+        },
+        "trial_name": "django__django-14170__Y86cjSb",
+        "trials_dir": "jobs/kimi-k31-pro-swv60",
+        "install_only": false,
+        "timeout_multiplier": 1.0,
+        "agent_timeout_multiplier": null,
+        "verifier_timeout_multiplier": null,
+        "agent_setup_timeout_multiplier": null,
+        "environment_build_timeout_multiplier": null,
+        "agent": {
+            "name": "terminus-2",
+            "import_path": null,
+            "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+            "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+            "model_api_key_name": "MODAL_PROXY_KEY",
+            "model_api_format": null,
+            "skip_model_parsing": false,
+            "n_concurrent": null,
+            "concurrency_group": null,
+            "skills": [],
+            "override_timeout_sec": null,
+            "override_setup_timeout_sec": null,
+            "max_timeout_sec": null,
+            "resume_trajectory": false,
+            "load_trajectory": null,
+            "extra_allowed_hosts": [],
+            "kwargs": {
+                "interleaved_thinking": true,
+                "session_id_headers": [
+                    "Modal-Routing-Affinity-Key"
+                ],
+                "model_info": {
+                    "litellm_provider": "openai",
+                    "mode": "chat",
+                    "max_input_tokens": 1048576,
+                    "max_output_tokens": 65536,
+                    "input_cost_per_token": 2e-6,
+                    "cache_read_input_token_cost": 2e-7,
+                    "output_cost_per_token": 0.00001
+                }
+            },
+            "mcp_servers": []
+        },
+        "user_agent": null,
+        "environment": {
+            "type": "modal",
+            "import_path": null,
+            "force_build": false,
+            "delete": true,
+            "stream": false,
+            "cpu_enforcement_policy": "auto",
+            "memory_enforcement_policy": "auto",
+            "override_cpus": null,
+            "override_memory_mb": null,
+            "override_storage_mb": null,
+            "override_gpus": null,
+            "override_tpu": null,
+            "mounts": null,
+            "extra_docker_compose": [],
+            "kwargs": {},
+            "extra_allowed_hosts": []
+        },
+        "verifier": {
+            "override_timeout_sec": null,
+            "max_timeout_sec": null,
+            "disable": false
+        },
+        "override_error_policy": {},
+        "artifacts": [],
+        "extra_instruction_paths": [],
+        "extra_instructions": [],
+        "job_id": "44625f19-07d0-4fa5-926d-8f40d37e6139",
+        "source_trial": null
+    },
+    "agent_info": {
+        "name": "terminus-2",
+        "version": "2.0.0",
+        "model_info": {
+            "name": "moonshotai/Kimi-K3.1-Pro",
+            "provider": "openai"
+        }
+    },
+    "agent_result": {
+        "n_input_tokens": 212854,
+        "n_cache_tokens": 176512,
+        "n_output_tokens": 6942,
+        "cost_usd": 0.17740640000000002,
+        "model_usage": {
+            "moonshotai/Kimi-K3.1-Pro": {
+                "n_input_tokens": 212854,
+                "n_cache_tokens": 176512,
+                "n_output_tokens": 6942,
+                "cost_usd": 0.17740640000000002
+            }
+        },
+        "rollout_details": [],
+        "metadata": {
+            "n_episodes": 15,
+            "api_request_times_msec": [
+                5381.587982177734,
+                1612.0250225067139,
+                3671.10276222229,
+                5019.181966781616,
+                9050.756931304932,
+                3208.181142807007,
+                12130.84077835083,
+                8854.231119155884,
+                6062.185049057007,
+                5404.09779548645,
+                5418.923139572144,
+                6648.515939712524,
+                2199.106216430664,
+                8848.8450050354,
+                1437.309980392456
+            ],
+            "summarization_count": 0
+        }
+    },
+    "verifier_result": {
+        "rewards": {
+            "reward": 0.0
+        }
+    },
+    "verifier_environment_mode": "shared",
+    "exception_info": null,
+    "started_at": "2026-11-18T07:22:26.658588Z",
+    "finished_at": "2026-11-18T07:27:16.961793Z",
+    "environment_setup": {
+        "started_at": "2026-11-18T07:22:26.660264Z",
+        "finished_at": "2026-11-18T07:23:42.853710Z"
+    },
+    "agent_setup": {
+        "started_at": "2026-11-18T07:23:42.853885Z",
+        "finished_at": "2026-11-18T07:24:15.970222Z"
+    },
+    "agent_execution": {
+        "started_at": "2026-11-18T07:24:15.972312Z",
+        "finished_at": "2026-11-18T07:27:03.573265Z"
+    },
+    "verifier": {
+        "started_at": "2026-11-18T07:27:05.143243Z",
+        "finished_at": "2026-11-18T07:27:16.605554Z"
+    },
+    "step_results": null,
+    "reward_valid": true
+}
