@@ -98,22 +98,32 @@ scripts/run-eval.sh -d swe-bench/swe-bench-verified -n 16
 ### 60-task subset
 
 `configs/swe-bench-verified-60.yaml` lists 60 SWE-bench Verified tasks, so every run of the subset
-uses exactly the same tasks. They were drawn at random with a fixed seed, stratified by repo ×
-difficulty, so the mix roughly matches the full 500:
+uses exactly the same tasks.
 
-| | Subset (60) | Full set (500) |
+- **Which tasks are eligible:** only tasks labelled `<15 min fix` or `15 min - 1 hour` (455 of the
+  500). The 45 tasks labelled `1-4 hours` or `>4 hours` are left out. These labels are SWE-bench's
+  estimate of how long a human engineer would take to fix the issue, not how long the agent runs.
+- **How the 60 were picked:** at random with a fixed seed, stratified by repo × difficulty, so the
+  mix roughly matches the 455 eligible tasks:
+
+| | Subset (60) | Eligible (455) |
 |---|---|---|
-| django / sympy / sphinx / matplotlib / scikit-learn | 28 / 9 / 5 / 4 / 4 | 231 / 75 / 44 / 34 / 32 |
-| astropy / xarray / pytest / requests / pylint | 3 / 3 / 2 / 1 / 1 | 22 / 22 / 19 / 8 / 10 |
+| django / sympy / sphinx / matplotlib / scikit-learn | 27 / 9 / 5 / 5 / 4 | 209 / 68 / 39 / 34 / 31 |
+| astropy / xarray / pytest / requests / pylint | 3 / 3 / 2 / 1 / 1 | 19 / 20 / 16 / 8 / 8 |
 | seaborn / flask | 0 / 0 | 2 / 1 |
-| `<15 min fix` / `15 min - 1 hour` / `1-4 hours` / `>4 hours` | 25 / 31 / 4 / 0 | 194 / 261 / 42 / 3 |
+| `<15 min fix` / `15 min - 1 hour` | 26 / 34 | 194 / 261 |
 
 The subset config also sets `n_concurrent_trials: 8` (8 tasks at a time); override with `-n`.
 
 To regenerate it, or to make a subset of a different size:
 
 ```bash
-uv run python scripts/sample_tasks.py                      # 60 tasks, seed 0 (reproduces the committed file)
+# Reproduces the committed file
+uv run python scripts/sample_tasks.py --n 60 --seed 0 \
+  --difficulty '<15 min fix' --difficulty '15 min - 1 hour' \
+  --out configs/swe-bench-verified-60.yaml
+
+# 100 tasks from all difficulty labels
 uv run python scripts/sample_tasks.py --n 100 --seed 0 --out configs/swe-bench-verified-100.yaml
 ```
 
@@ -178,12 +188,9 @@ reports `prompt_tokens_details.cached_tokens`, which Harbor records as `n_cache_
 cost = (n_input_tokens − n_cache_tokens) × 2e-6 + n_cache_tokens × 2e-7 + n_output_tokens × 1e-5
 ```
 
-Reference run (`jobs/kimi-k31-pro-django-11099-script/`, `swe-bench/django__django-11099`,
-2026-11-17, run with `scripts/run-eval.sh` and this config): reward 1.0, 5 turns, 1m 21s trial time,
-14,865 input / 11,328 cached / 2,022 output tokens → `cost_usd` **$0.0296**, which equals the formula
-above. An earlier run of the same task (not committed) used 12 turns and cost $0.090, and Modal's
-bill for it matched Harbor's token counts exactly. Cost varies between runs of the same task with
-the number of turns the model takes.
+Example: on `swe-bench/django__django-11099` (a `<15 min fix` task), three runs all passed and cost
+$0.090, $0.030 and $0.021 (12, 5 and 5 turns). For the first run, Modal's bill matched Harbor's token
+counts exactly. Cost for the same task varies with the number of turns the model takes.
 
 ## Config notes
 
@@ -191,7 +198,7 @@ the number of turns the model takes.
   it back on later turns, as Kimi expects in agent loops.
 - **`session_id_headers: [Modal-Routing-Affinity-Key]`** — sends a per-trial ID in Modal's routing
   header so all turns of a trial hit the same container and reuse its prompt-prefix KV cache
-  (76% of input tokens were cache hits in the reference run). It doesn't configure the cache, only routing; it affects
+  (76–86% of input tokens were cache hits in test runs). It doesn't configure the cache, only routing; it affects
   speed/cost, not results. (Harbor's docstring mentions `Modal-Session-ID`; that is for Modal
   *Servers* — Endpoints use `Modal-Routing-Affinity-Key`.)
 - **`model_info`** — LiteLLM doesn't know this model, so the 1M-token context window (used for
