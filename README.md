@@ -78,7 +78,7 @@ uv run harbor run -t swe-bench/django__django-11099 -a oracle -e modal
 
 ```bash
 # Default: single task swe-bench/django__django-11099
-scripts/run-eval.sh --job-name kimi-k31-pro-django-11099
+scripts/run-eval.sh --job-name my-django-run
 
 # A different single task (IDs need the "swe-bench/" prefix)
 scripts/run-eval.sh -t swe-bench/astropy__astropy-12907
@@ -148,8 +148,12 @@ reports `prompt_tokens_details.cached_tokens`, which Harbor records as `n_cache_
 cost = (n_input_tokens − n_cache_tokens) × 2e-6 + n_cache_tokens × 2e-7 + n_output_tokens × 1e-5
 ```
 
-Reference run (`swe-bench/django__django-11099`, 2026-11-14): reward 1.0, 12 turns, 1m 51s,
-77,279 input / 63,168 cached / 4,880 output tokens → **$0.090**, matching Modal's billing.
+Reference run (`jobs/kimi-k31-pro-django-11099-script/`, `swe-bench/django__django-11099`,
+2026-11-17, run with `scripts/run-eval.sh` and this config): reward 1.0, 5 turns, 1m 21s trial time,
+14,865 input / 11,328 cached / 2,022 output tokens → `cost_usd` **$0.0296**, which equals the formula
+above. An earlier run of the same task (not committed) used 12 turns and cost $0.090, and Modal's
+bill for it matched Harbor's token counts exactly. Cost varies between runs of the same task with
+the number of turns the model takes.
 
 ## Config notes
 
@@ -157,7 +161,7 @@ Reference run (`swe-bench/django__django-11099`, 2026-11-14): reward 1.0, 12 tur
   it back on later turns, as Kimi expects in agent loops.
 - **`session_id_headers: [Modal-Routing-Affinity-Key]`** — sends a per-trial ID in Modal's routing
   header so all turns of a trial hit the same container and reuse its prompt-prefix KV cache
-  (~80% cache hits in the reference run). It doesn't configure the cache, only routing; it affects
+  (76% of input tokens were cache hits in the reference run). It doesn't configure the cache, only routing; it affects
   speed/cost, not results. (Harbor's docstring mentions `Modal-Session-ID`; that is for Modal
   *Servers* — Endpoints use `Modal-Routing-Affinity-Key`.)
 - **`model_info`** — LiteLLM doesn't know this model, so the 1M-token context window (used for
