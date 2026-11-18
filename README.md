@@ -114,6 +114,14 @@ uses exactly the same tasks.
 | `<15 min fix` / `15 min - 1 hour` | 26 / 34 | 194 / 261 |
 
 The subset config also sets `n_concurrent_trials: 8` (8 tasks at a time); override with `-n`.
+Modal's Shared Endpoint for Kimi-K3.1-Pro allowed 16 requests in flight at once in our workspace
+(more get HTTP 429); each running task has at most one request in flight, so stay at 12 or below.
+
+First run (`jobs/kimi-k31-pro-swv60/`, 2026-11-17): **53 of 60 passed (88.3%)**. Harbor's job
+summary shows 89.8% because it leaves out `sphinx-doc__sphinx-10673`, which ended with
+`RewardFileNotFoundError` (the grader produced no score). Took 57 minutes at 8 tasks at a time.
+Inference cost **$9.66** (12.9M input tokens, 89% cached; 0.46M output tokens), $0.035–$0.47 per
+task with a median of $0.14, matching Modal's bill.
 
 To regenerate it, or to make a subset of a different size:
 

@@ -1,0 +1,3409 @@
+{
+    "schema_version": 3,
+    "created_at": "2026-11-18T06:39:01.136675Z",
+    "harbor": {
+        "version": "0.26.0",
+        "is_editable": false
+    },
+    "n_concurrent_trials": 8,
+    "retry": {
+        "max_retries": 0,
+        "exclude_exceptions": [
+            "APIResponseValidationError",
+            "AgentAuthenticationError",
+            "AgentSafetyRefusalError",
+            "AgentTimeoutError",
+            "ApiProviderResourceNotFoundError",
+            "AuthenticationError",
+            "BadRequestError",
+            "BudgetExceededError",
+            "CancelledError",
+            "ContentPolicyViolationError",
+            "ContextLengthExceededError",
+            "ContextWindowExceededError",
+            "DspyImportError",
+            "MissingExtraError",
+            "ModelNotFoundError",
+            "NonZeroAgentExitCodeError",
+            "NotFoundError",
+            "OutputLengthExceededError",
+            "OutputTokenExceededError",
+            "PermissionDeniedError",
+            "RegradeError",
+            "RewardFileEmptyError",
+            "RewardFileNotFoundError",
+            "ServiceOperationsUnsupportedError",
+            "UnprocessableEntityError",
+            "UnsupportedModelParametersError",
+            "UnsupportedParamsError",
+            "VercelScopeError",
+            "VerifierOutputParseError",
+            "VerifierTimeoutError"
+        ],
+        "wait_multiplier": 1.0,
+        "min_wait_sec": 1.0,
+        "max_wait_sec": 60.0
+    },
+    "trials": [
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/django__django-16950",
+                "type": "package",
+                "digest": "sha256:19d59ef2beed7f19d27853767755098156d3acc252d9180b5e2c34847c704022",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/django__django-13121",
+                "type": "package",
+                "digest": "sha256:1026a582cea5082342f08428a048303b82f34cd3be8182f39a2da18492184100",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/astropy__astropy-8707",
+                "type": "package",
+                "digest": "sha256:a326ff1f387c546d3ba139af6cf0714a924334cb5df1595f064306ece9dd7f4f",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/django__django-7530",
+                "type": "package",
+                "digest": "sha256:f2cf0283106cb745a25f59ee5f556efe1b41acb01da4fad48e39c6b2e370020d",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/django__django-16612",
+                "type": "package",
+                "digest": "sha256:fed1da701d874cc087da6e34486501016d5ab2cb2ba6641b3f59f0cc07ad12c6",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/django__django-16139",
+                "type": "package",
+                "digest": "sha256:3049aceb0676997392bf05d876e7d5694ffeb31a0343cace2c920925dc6a328c",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/sympy__sympy-15345",
+                "type": "package",
+                "digest": "sha256:1364511e93a400652c95d9e615c366a917577750fa0733e7bd7c8aea94ca90ed",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/django__django-11179",
+                "type": "package",
+                "digest": "sha256:d7fe3f8ca4af3e8b02039ec60d6ed0063918d804c2f8e023b13df46a317c7a2f",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/django__django-14122",
+                "type": "package",
+                "digest": "sha256:00f6d6841e97f07be1b72ffa464fc729e23c155a3793dc6b8d0045ab1b8e2c2f",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/django__django-13551",
+                "type": "package",
+                "digest": "sha256:bfbdc65069e90ed1b7eee1280b81fe525209560798854621878608cb9a05bd5a",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/scikit-learn__scikit-learn-14141",
+                "type": "package",
+                "digest": "sha256:f2609e6dc6ca2935f18bf13d058d3badf8e1a13f10ff0882d65e701b935cf93f",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/django__django-16801",
+                "type": "package",
+                "digest": "sha256:39b8ed79de5c2a1eb785e45419bacd5ecbb8981d6e46e4ddd4982f40cac6c9d1",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/django__django-15467",
+                "type": "package",
+                "digest": "sha256:4aa36efc663e3b22aceea96d81de3e19e094778f1b5e9a83d3ff74db800de431",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/django__django-14053",
+                "type": "package",
+                "digest": "sha256:bcb295c527c6686dae3db979b4823099818e1b8ecb98439d323a6bfdbe7f5b2f",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/sympy__sympy-11618",
+                "type": "package",
+                "digest": "sha256:84d1f045ea502201d12f823039b68470c1194044cff65b2a3db86162fdef0f96",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/sympy__sympy-23534",
+                "type": "package",
+                "digest": "sha256:88c1b34e37f97e1d4daefe298eced5ec7733e78624180d79facb11becda5e906",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/matplotlib__matplotlib-24627",
+                "type": "package",
+                "digest": "sha256:881fa31bf0250ac4f80b597f2f9b23d03ff474079435383363a03b34f43d6b65",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/scikit-learn__scikit-learn-14087",
+                "type": "package",
+                "digest": "sha256:6f340ca03390d0ab3c409e06ecb0f6e65943ac4dc7229df556514bbc13f3e44c",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/sphinx-doc__sphinx-8621",
+                "type": "package",
+                "digest": "sha256:116b72873f53802bcc4c97a3c464fb1a6c2ac35ce511954368df15bb2e3187cc",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/django__django-11433",
+                "type": "package",
+                "digest": "sha256:3c394e8918490a1d3959cd143c995520248b664381a2eac58be41f06da9e3e7e",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/sphinx-doc__sphinx-9711",
+                "type": "package",
+                "digest": "sha256:2dcf5b053828df3ded2a42f7a12dbd5831ab01c22ccd31c3044de2aae660cb11",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/sympy__sympy-19346",
+                "type": "package",
+                "digest": "sha256:6030f154b5333065fdfd36cf489ef28ee1a89295df1310973f4704ce918c3402",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/pydata__xarray-4094",
+                "type": "package",
+                "digest": "sha256:0ad91a58b77e59afff199f7b07f7814fecceb174cf3c4b3686985a4ebe9029eb",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/django__django-13401",
+                "type": "package",
+                "digest": "sha256:13e4c73a985df1d063bfc72201517e8ddb0fb1aff14aa892b275574ee01f005d",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/sphinx-doc__sphinx-9698",
+                "type": "package",
+                "digest": "sha256:d572d2090018118d26e2a83a8f71bd55f1f053ae2ddcb6f302dc2af8ccaf27d1",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/matplotlib__matplotlib-25960",
+                "type": "package",
+                "digest": "sha256:e50b83b27ef4bff7942e6cfad84d10a56e3e1fcc386e67cb725264b40b51c30c",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/pytest-dev__pytest-7982",
+                "type": "package",
+                "digest": "sha256:f3fd7a6bbb8185e3078458975857a6474120829ad4441ccbeeb3d11e59f2fa7a",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/scikit-learn__scikit-learn-26323",
+                "type": "package",
+                "digest": "sha256:e890db11b5600a0576599838e64566ce966517e7ff8c359553df24dd33c1838a",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/sympy__sympy-19040",
+                "type": "package",
+                "digest": "sha256:b976e511b01e435abdd457d5c3a5b022f6a6c6b8e3f165c19f715eec46d0f804",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/pytest-dev__pytest-8399",
+                "type": "package",
+                "digest": "sha256:2be462a03b1062348f0ef483719d249a0374fcdeb9a757e3dbd7e004e8584970",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/django__django-14725",
+                "type": "package",
+                "digest": "sha256:5ef6f254fc69446310fb63c4659b9eb31a78acea7c96f93f94c2984947a5acc2",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/matplotlib__matplotlib-24149",
+                "type": "package",
+                "digest": "sha256:69e86966c71146eb48dacca1c4fd5bca6e37447c025619e258561439e4a05d94",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/sphinx-doc__sphinx-10673",
+                "type": "package",
+                "digest": "sha256:9f1b5862aeaadff32a3399fc296b74d9dddcf1abef1af7a2fe4f3f4646424187",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/sympy__sympy-21930",
+                "type": "package",
+                "digest": "sha256:7bf51188f83dc0a3b591d047b360ddd1759994eea19a20f5215653c3cb19daca",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/django__django-13410",
+                "type": "package",
+                "digest": "sha256:3d28f166d0c53aaa59f0f8d4b545d95315707a89783f48fc634e38d41079d323",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/django__django-16100",
+                "type": "package",
+                "digest": "sha256:beb864b0182f1f5ce53c6ff2762c2bd6c4aef6ff048fc0c777b58403972e972e",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/psf__requests-1766",
+                "type": "package",
+                "digest": "sha256:250108c3eddd015064b7aaf2d991e6c31aa2c71366c98cb84b73d3ea68c5a54a",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/django__django-17087",
+                "type": "package",
+                "digest": "sha256:2461cc6a782e24601cd5f8b8f7d65985f20647a6b3eb367cb1111fb60ac69af6",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/astropy__astropy-7336",
+                "type": "package",
+                "digest": "sha256:ddaaf10bcb713a1ffbf3e208f48bc499bee76245d2fbde2ae1bd5f852e82f0e5",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/matplotlib__matplotlib-24177",
+                "type": "package",
+                "digest": "sha256:0fc7cfc02b3fcc3b8778a61c2ceee84387ca8cd1d8268f1eee03855870550bc9",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/django__django-11880",
+                "type": "package",
+                "digest": "sha256:706c52849712435e251036e0a5f4978a817484ae53d3b9423802ac8db3ba7f06",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/django__django-13112",
+                "type": "package",
+                "digest": "sha256:8f487da6b4a8836de55de623fee9b0f3d50168c2eec0e9b842599aacc29764fb",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/django__django-12273",
+                "type": "package",
+                "digest": "sha256:35b1a667c2f976d33d0ee00053ebc0353db22d90b61afba1b206e5640a977435",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/pydata__xarray-6721",
+                "type": "package",
+                "digest": "sha256:283c5d408ecefa15f1764fb0b9573c854f5b2c2e5d6b8ca8919bfa8543004ae1",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/django__django-16315",
+                "type": "package",
+                "digest": "sha256:116a7735b1fcd9d16b4d6ecbd32c78981440f2613f5a27355181cc461298fbbe",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/django__django-12858",
+                "type": "package",
+                "digest": "sha256:77eb07ed567af799859eb84eb8f8d7474c068f3646ddfc236bd53526cb0c96f8",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/pylint-dev__pylint-7080",
+                "type": "package",
+                "digest": "sha256:b8ff68533a0a764863901e1486f82843cd16d34e3855564c35f6068edd5b2448",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/sympy__sympy-24066",
+                "type": "package",
+                "digest": "sha256:03a140161f107997bb5c442b093fb689703392510f440413c9c30193bff02df1",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/sympy__sympy-13372",
+                "type": "package",
+                "digest": "sha256:b9978fb245bd99ab5135758671ba5c436b4ba38ec5e9d34434007d112af7983a",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/django__django-11820",
+                "type": "package",
+                "digest": "sha256:46290922d8d8855060ad6abb5ae2401c3ef15215efbf08338b12eb7c51fec9f7",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/pydata__xarray-6744",
+                "type": "package",
+                "digest": "sha256:39914d5087838e9c74806e714f21408b89e6b95aaf71f072bb2a84a7ca907e4c",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/scikit-learn__scikit-learn-11310",
+                "type": "package",
+                "digest": "sha256:a33a1c0d0ad0e41bd3e19e003e1447553fc11e78b648a8b0a558a3bd97b66ca1",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/django__django-14155",
+                "type": "package",
+                "digest": "sha256:82acfd4e37edf9da8b25d93a20a8dc0ca7414ff03f4aeeabcd8fa73e18237e14",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/django__django-13658",
+                "type": "package",
+                "digest": "sha256:be550d45ea9655c486b3bf339ceadb912306a073e6bd3a171b9654d49a19fa5f",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/sympy__sympy-15976",
+                "type": "package",
+                "digest": "sha256:49b6b6959df45ed6a2d02e775e6322967c903abc5e3e32b21b951787ad8d758d",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/matplotlib__matplotlib-21568",
+                "type": "package",
+                "digest": "sha256:06df6436f473de482ec6d06a62d5176e04984fbfe7eef2ef7dc7b5f8b87a8c1f",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/sphinx-doc__sphinx-10466",
+                "type": "package",
+                "digest": "sha256:295c33af0b8103091c50e9fb1e40330e41cf8f30903e5cf7e081665374cdfb51",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/django__django-11206",
+                "type": "package",
+                "digest": "sha256:c5435a67cf95b4448530cdf83fa7179eb1943b2d012362e26b42a1d4b3cf096a",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/astropy__astropy-14182",
+                "type": "package",
+                "digest": "sha256:93b40be3d250f38be43119cd80b6caab64ac767d310d63593c97afa2ec20a0bd",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        },
+        {
+            "schema_version": 2,
+            "task": {
+                "name": "swe-bench/django__django-14170",
+                "type": "package",
+                "digest": "sha256:e574df2c38dab6af9b8a5db2de401eee6a11aa8dff74905f0d365d93b425bd33",
+                "source": "swe-bench/swe-bench-verified"
+            },
+            "install_only": false,
+            "timeout_multiplier": 1.0,
+            "agent": {
+                "name": "terminus-2",
+                "model_name": "openai/moonshotai/Kimi-K3.1-Pro",
+                "base_url": "https://jason-62209--ep-kimi-k3-1-pro-server.us-west.modal.direct/v1",
+                "model_api_key_name": "MODAL_PROXY_KEY",
+                "skip_model_parsing": false,
+                "skills": [],
+                "resume_trajectory": false,
+                "extra_allowed_hosts": [],
+                "kwargs": {
+                    "interleaved_thinking": true,
+                    "session_id_headers": [
+                        "Modal-Routing-Affinity-Key"
+                    ],
+                    "model_info": {
+                        "litellm_provider": "openai",
+                        "mode": "chat",
+                        "max_input_tokens": 1048576,
+                        "max_output_tokens": 65536,
+                        "input_cost_per_token": 2e-6,
+                        "cache_read_input_token_cost": 2e-7,
+                        "output_cost_per_token": 0.00001
+                    }
+                },
+                "mcp_servers": []
+            },
+            "bridge_inputs": {},
+            "skills": [],
+            "environment": {
+                "type": "modal",
+                "force_build": false,
+                "delete": true,
+                "stream": false,
+                "cpu_enforcement_policy": "auto",
+                "memory_enforcement_policy": "auto",
+                "extra_docker_compose": [],
+                "kwargs": {},
+                "extra_allowed_hosts": []
+            },
+            "verifier": {
+                "disable": false,
+                "environment_mode": "shared"
+            },
+            "artifacts": [],
+            "override_error_policy": {}
+        }
+    ]
+}
